@@ -1,8 +1,14 @@
 <Alloy>
 	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
-		<View layout="vertical">
+		<ListView id="listView" defaultItemTemplate="userTemplate">
 			<SearchBar id="searchBar" platform="ios" class="search" showCancel="true" hintText="type here" top="30" />
-		</View>
+			<Templates>
+				<ItemTemplate id="userTemplate" name="userTemplate" class="template">
+					<View class="left-buffer">
+						<ImageView id="imageUrl" bindId="imageUrl" class="avatar" />
+					</View>
+				</ItemTemplate>
+			</Templates>
+		</ListView>
 	</Window>
 </Alloy>
