@@ -1,14 +1,24 @@
 <Alloy>
-	<Window class="container">
-		<ListView id="listView" defaultItemTemplate="userTemplate">
-			<SearchBar id="searchBar" platform="ios" class="search" showCancel="true" hintText="type here" top="30" />
-			<Templates>
-				<ItemTemplate id="userTemplate" name="userTemplate" class="template">
-					<View class="left-buffer">
-						<ImageView id="imageUrl" bindId="imageUrl" class="avatar" />
-					</View>
-				</ItemTemplate>
-			</Templates>
-		</ListView>
-	</Window>
+	<NavigationWindow id="win1" platform="ios" class="container">
+		<Window id="wrapper">
+			<ListView id="listView" defaultItemTemplate="userTemplate">
+				<SearchBar id="searchBar" platform="ios" class="search" showCancel="true" hintText="type here" top="30" />
+				<Templates>
+					<ItemTemplate id="userTemplate" name="userTemplate" class="template">
+						<View class="left-buffer">
+							<ImageView id="imageUrl" bindId="imageUrl" class="avatar" />
+							<Label id="fullName" bindId="fullName" class="title" />
+							<Label id="gender" bindId="gender" class="title" />
+							<!-- <Label id="bio" bindId="bio" class="bio" /> -->
+							<Label id="city" bindId="city" class="address" />
+							<Label id="state" bindId="state" class="address" />
+							<Label id="street" bindId="street" class="address" />
+							<Label id="zip" bindId="zip" class="address" />
+						</View>
+						<View class="gray-line bottom"/>
+					</ItemTemplate>
+				</Templates>
+			</ListView>
+		</Window>
+	</NavigationWindow>
 </Alloy>
